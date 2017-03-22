@@ -25,11 +25,33 @@ $(document).ready(function() {
   var secondNumber = parseInt($("#add2").val());
   var result = add(firstNumber, secondNumber);
   $("#output").text(result);
+	});
 
-// $(document).ready(function() {
-//   var number1 = parseInt($("#add1").val());
-//   var number2 = parseInt($("#add2").val());
-//   alert(add(number1, number2));
+
+	$("form#subtract").submit(function(event) {
+	event.preventDefault();
+  var firstNumber = parseInt($("#sub1").val());
+  var secondNumber = parseInt($("#sub2").val());
+  var result = subtract(firstNumber, secondNumber);
+  $("#output").text(result);
+	});
+
+
+	$("form#multiply").submit(function(event) {
+	event.preventDefault();
+	var firstNumber = parseInt($("#mult1").val());
+	var secondNumber = parseInt($("#mult2").val());
+	var result = multiply(firstNumber, secondNumber);
+	$("#output").text(result);
+	});
+
+
+	$("form#divide").submit(function(event) {
+	event.preventDefault();
+	var firstNumber = parseInt($("#div1").val());
+	var secondNumber = parseInt($("#div2").val());
+	var result = divide(firstNumber, secondNumber);
+	$("#output").text(result);
 
 	});
 });
